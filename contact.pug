@@ -1,0 +1,76 @@
+doctype html
+html
+  head
+    title Liên hệ
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="./Css/contact.css")
+  body
+  include ./header1
+  .container
+    .col-md-12.custom-form
+      .d-flex.justify-content-between.align-items-center.mb-2
+        div
+          a.custom-form__link(href="#") Trang chủ / 
+          a.custom-form__link(href="#") liên hệ
+          h2.custom-form__title LIÊN HỆ
+      .image-container.custom-form__image-container
+        img.img-fluid.custom-form__image(src="/images/titleleft-dark.png", alt="Ảnh đại diện")
+  .container.mt-5
+    .row
+      .col-md-9
+        iframe.custom-form__map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0977426142067!2d105.84978977515297!3d21.02877473062063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab953357c995%3A0x1babf6bb4f9a20e!2zSOG7kyBIb8OgbiBLaeG6v20!5e0!3m2!1svi!2s!4v1691317619214!5m2!1svi!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+        form.custom-form__message-form(action="/submit-message", method="post")
+          .form-group
+            label(for="name") Tên của bạn:
+            input#name.form-control(type="text", name="name", required)
+
+          .form-group
+            label(for="email") Email:
+            input#email.form-control(type="email", name="email", required)
+
+          .form-group
+            label(for="subject") Chủ đề:
+            input#subject.form-control(type="text", name="subject", required)
+
+          .form-group
+            label(for="message") Tin nhắn:
+            textarea#message.form-control(name="message", rows="4", required)
+
+        button.btn.btn-dark(type="submit") Gửi 
+      .col-md-3
+        .customer-info
+          img(src="./images/header.jpg" alt="Logo Công ty")
+          | &nbsp;
+          p.customer-info__detail
+            i.fas.fa-map-marker-alt
+              | Tầng 4, Tòa nhà  Hanoi Group Số 442 đội Cấn,P.Cống Vị, Q.Ba Đình, Hà Nội
+          p.customer-info__detail
+            i.fas.fa-phone
+              |  (04) 66742323
+          p.customer-info__detail
+             i.fas.fa-envelope
+              | supportmilano@gmai.com
+          p.customer-info__detail
+            | Follow us
+          p.customer-info__detail  
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-facebook-square
+            | &nbsp; 
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-twitter-square
+            | &nbsp; 
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-instagram-square
+            | &nbsp;  
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-google
+            | &nbsp;
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-youtube
+            | &nbsp;
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              i.fab.fa-pinterest
+            
+
+  include footer 

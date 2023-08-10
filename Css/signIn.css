@@ -1,0 +1,139 @@
+@charset "UTF-8";
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header--top {
+  background-color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+}
+
+.nav__list--top {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav__list--top .nav__item {
+  margin-left: 20px;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.nav__list--top .nav__item a,
+.nav__list--bottom .nav__item a {
+  text-decoration: none;
+  color: #d29e9e;
+}
+
+.search-bar--top {
+  display: flex;
+  align-items: right;
+}
+
+.search-bar__input {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #090909;
+}
+
+.search-bar__button {
+  padding: 5px;
+  background-color: #fffbfb;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #d29e9d;
+}
+
+.search-bar__button i {
+  font-size: 1.2em;
+}
+
+.header--bottom {
+  background-color: #000000;
+  padding: 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.nav--bottom {
+  text-align: center;
+}
+
+.nav__list--bottom {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list--bottom .nav__item {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.nav__list--bottom .nav__item:first-child img {
+  width: 214px;
+  height: 153px;
+  margin-right: 40px;
+  margin-left: 120px;
+}
+
+.nav__list--bottom .nav__item a {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  list-style-type: none;
+}
+
+.nav__list--bottom .nav__item a:hover,
+.nav__list--bottom .nav__item a:active {
+  color: yellow;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Căn đầu trang lên phía trên */
+  flex-direction: column; /* Chia thành cột dọc */
+}
+
+.custom-form {
+  width: 100%; /* Sử dụng 70% chiều ngang của trang */
+  max-width: 4000px; /* Để đảm bảo form không quá rộng */
+  margin: 0 auto;
+}
+
+.custom-form__image-container {
+  text-align: left; /* Căn giữa theo chiều ngang */
+  margin-top: -20px; /* Khoảng cách từ ảnh đến chữ "Đăng nhập" */
+  width: 1200px;
+}
+
+.custom-form__button {
+  background-color: black; /* Thay đổi màu nền của nút thành đen */
+  font-size: 20px; /* You can adjust the font size as needed */
+  margin-left: 10px; /* Add spacing between heading and button */
+  vertical-align: middle; /* Align button vertically with the heading */
+}
+
+.custom-form__button-spacing {
+  margin-left: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+}
+
+/*# sourceMappingURL=signIn.css.map */

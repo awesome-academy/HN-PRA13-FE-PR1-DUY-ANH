@@ -1,0 +1,197 @@
+
+@import './header.scss';
+
+.col-md-3 {
+    .recent-posts {
+        margin-bottom: 20px;
+
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .recent-post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            &__image {
+                width: 80px; /* Đảm bảo chiều rộng và chiều cao bằng nhau */
+                height: 80px; /* Đảm bảo chiều rộng và chiều cao bằng nhau */
+                object-fit: cover;
+                border-radius: 10px; /* Để tạo góc bo tròn */
+                margin-right: 15px;
+            }
+
+            &__info {
+                h6.recent-post__info-title {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                p.recent-post__info-description {
+                    font-size: 14px;
+                    color: #555;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .blog-tags {
+        .btn-secondary.blog-tags__item {
+            border-radius: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+          
+            input[type="checkbox"]:checked + & {
+              background-color: #f8a054;
+            }
+          
+            &:hover {
+              background-color: #ddd;
+            }
+}
+    }
+    .latest-video {
+        margin-top: 30px;
+        
+        .latest-video__title {
+          margin-bottom: 15px;
+        }
+        
+        .latest-video__embed-responsive {
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 aspect ratio */
+          height: 0;
+          
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    
+}
+
+.col-md-9 {
+    .blog-post {
+      .blog-post__image {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .blog-post__title {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      
+      .blog-post__meta {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 20px;
+      }
+      
+      .blog-post__comment-form {
+        .form-group {
+          margin-bottom: 15px;
+          
+          label {
+            font-weight: bold;
+          }
+          
+          input,
+          textarea {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .comments {
+        margin-top: 30px;
+        
+        .comments__title {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+          
+          .comment {
+            border: 1px solid #ddd;
+            background-color: #e2c1c1;
+            padding: 10px;
+            margin-bottom: 15px;
+            
+            .comment__header {
+              display: flex;
+              justify-content: space-between;
+              align-items: baseline;
+              
+              .comment__author {
+                font-style: italic;
+                margin-bottom: 5px;
+              }
+              
+              .comment__reply {
+                font-style: italic;
+                cursor: pointer;
+                text-decoration: underline; 
+              }
+            }
+            
+            .comment__content {
+              margin-top: 10px;
+            }
+            
+            .comment__quote {
+              display: block;
+              margin-top: 15px;
+              font-style: italic;
+            }
+          }
+          ul.pagination.justify-content-end { // Thêm lớp justify-content-end
+            margin-top: 15px;
+            li.page-tranfer{
+                background-color: #f5f4f4;
+                color: #f0f0f0;
+            }
+            li.page-item {
+              display: inline-block;
+              margin-right: 10px;
+              
+          
+              &.active {
+                a.page-link {
+                  background-color: #816161;
+                  border-color: #d7d8d9;
+                  color: #d7d8d9;
+                }
+              }
+            }
+            
+            a.page-link {
+              color: #030303;
+              text-decoration: none;
+              background-color: transparent;
+              border: 1px solid #ddd;
+              padding: 5px 10px;
+              border-radius: 0;
+              
+              &:hover {
+                background-color: #f9f9f9;
+              }
+            }
+          }
+        }
+      }
+        
+      
+    
+  
+  

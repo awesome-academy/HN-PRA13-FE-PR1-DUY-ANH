@@ -1,0 +1,33 @@
+@import './header.scss';
+
+.custom-form__image-container {
+  text-align: left; /* Căn giữa theo chiều ngang */
+  margin-top: -20px; /* Khoảng cách từ ảnh đến chữ "Đăng nhập" */
+  width: 1200px;
+}
+
+.customer-info {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    
+  }
+  .customer-info__detail {
+    text-transform: lowercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+  .header-wrapper {
+    background-color: #f7eded;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #dee2e6;
+  }
+  
