@@ -1,0 +1,201 @@
+doctype html
+html
+  head
+    title Địa chỉ
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="./Css/address.css")
+  body
+    include ./header1
+    .container
+      .col-md-12.custom-form
+        .d-flex.justify-content-between.align-items-center.mb-2
+          div
+            a.custom-form__link(href="#") Trang chủ / 
+            a.custom-form__link(href="#") Địa chỉ
+            h2.custom-form__title ĐỊA CHỈ
+        .image-container.custom-form__image-container
+          img.img-fluid.custom-form__image(src="/images/titleleft-dark.png", alt="Ảnh đại diện")
+    .container.mt-5
+      .row
+        .col-md-6
+          .default-address
+            h3 Địa chỉ của bạn
+            .info-box
+              .form-group.row
+                label.col-sm-4(for="name") Tên của bạn:
+                .col-sm-8
+                  input#name.form-control( name="name", value="Giang", readonly)
+              .form-group.row
+                label.col-sm-4(for="middleName") Họ và tên đệm:
+                .col-sm-8
+                  input#middleName.form-control( name="middleName", value="Lê Anh", readonly)
+              .form-group.row
+                label.col-sm-4(for="company") Công ty:
+                .col-sm-8
+                  input#company.form-control( name="company", value="Công ty cổ phần công nghệ DKT", readonly)
+              .form-group.row
+                label.col-sm-4(for="address") Địa chỉ:
+                .col-sm-8
+                  input#address.form-control( name="address", value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội", readonly)
+              .form-group.row
+                label.col-sm-4(for="city") Thành phố:
+                .col-sm-8
+                  input#city.form-control( name="city", value="Hà Nội", readonly)
+              .form-group.row
+                label.col-sm-4(for="nationality") Quốc Tịch:
+                .col-sm-8
+                  input#nationality.form-control(name="nationality", value="Việt Nam", readonly)
+              .form-group.row
+                label.col-sm-4(for="postalCode") Postal/Zip Code:
+                .col-sm-8
+                  input#postalCode.form-control( name="postalCode", value="23000089", readonly)
+              .form-group.row
+                label.col-sm-4(for="phone") Phone:
+                .col-sm-8
+                  input#phone.form-control(name="phone", value="023159981", readonly)
+              .form-group.row.d-flex.align-items-center
+                .col-sm-6
+                  input#setDefaultAddress(type="checkbox")
+                .col-sm-6
+                  label(for="setDefaultAddress" class="ml-2") Đặt làm địa chỉ mặc định?
+              .form-group.row.d-flex.justify-content-between
+                .col-sm-6
+                  button.edit-address-button.btn.btn-primary Chỉnh sửa địa chỉ
+                .col-sm-6
+                  button.delete-address-button.btn.btn-danger Xóa
+
+          .row
+            .col-md-12
+              hr.divider-line
+        
+
+          .address
+            .info-box
+              .form-group.row
+                label.col-sm-4(for="name") Tên của bạn:
+                .col-sm-8
+                 label.col-sm-8(for="name") Giang
+              .form-group.row
+                label.col-sm-4(for="middleName") Họ và tên đệm:
+                .col-sm-8
+                   label.col-sm-8(for="middleName") Lê Anh
+              .form-group.row
+                label.col-sm-4(for="company") Công ty:
+                .col-sm-8
+                  label.col-sm-8(for="company") Công ty cổ phần công nghệ DKT
+              .form-group.row
+                label.col-sm-4(for="address") Địa chỉ:
+                .col-sm-8
+                 label.col-sm-8(for="address") Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
+              .form-group.row
+                label.col-sm-4(for="city") Thành phố:
+                .col-sm-8
+                  label.col-sm-8(for="city") Hà Nội
+              .form-group.row
+                label.col-sm-4(for="nationality") Quốc Tịch:
+                .col-sm-8
+                  label.col-sm-8(for="nationality") Việt Nam
+              .form-group.row
+                label.col-sm-4(for="postalCode") Postal/Zip Code:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") 23000089
+              .form-group.row
+                label.col-sm-4(for="phone") Phone:
+                .col-sm-8
+                 label.col-sm-8(for="postalCode") 0912889277
+                .col-sm-12.text-right  
+                  a.custom-form__link(href="#" onclick="editAddress()") Chỉnh sửa địa chỉ
+
+          .row
+            .col-md-12
+              hr.divider-line
+          
+          .address 
+            .info-box
+              .form-group.row
+                label.col-sm-4(for="name") Tên của bạn:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Giang
+              .form-group.row
+                label.col-sm-4(for="middleName") Họ và tên đệm:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Lê Anh 
+              .form-group.row
+                label.col-sm-4(for="company") Công ty:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Công ty cổ phần công nghệ DKT
+              .form-group.row
+                label.col-sm-4(for="address") Địa chỉ:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
+              .form-group.row
+                label.col-sm-4(for="city") Thành phố:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Hà Nội
+              .form-group.row
+                label.col-sm-4(for="nationality") Quốc Tịch:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") Việt Nam
+              .form-group.row
+                label.col-sm-4(for="postalCode") Postal/Zip Code:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") 23000089
+              .form-group.row
+                label.col-sm-4(for="phone") Phone:
+                .col-sm-8
+                  label.col-sm-8(for="postalCode") 0912889277
+                .col-sm-12.text-right  
+                  a.custom-form__link(href="#" onclick="editAddress()") Chỉnh sửa địa chỉ 
+
+          .row
+            .col-md-12
+              hr.divider-line
+        .col-md-6
+          .edit-address
+            a.custom-form__link(href="#" onclick="editAddress()") Chỉnh sửa địa chỉ 
+            .info-box
+              .form-group.row
+                label.col-sm-4(for="name") Tên của bạn:
+                .col-sm-8
+                  input#name.form-control( type="text", name="name", value="Giang")
+              .form-group.row
+                label.col-sm-4(for="middleName") Họ và tên đệm:
+                .col-sm-8
+                  input#middleName.form-control( name="middleName", value="Lê Anh")
+              .form-group.row
+                label.col-sm-4(for="company") Công ty:
+                .col-sm-8
+                  input#company.form-control( name="company", value="Công ty cổ phần công nghệ DKT")
+              .form-group.row
+                label.col-sm-4(for="address") Địa chỉ:
+                .col-sm-8
+                  input#address.form-control( name="address", value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội")
+              .form-group.row
+                label.col-sm-4(for="city") Thành phố:
+                .col-sm-8
+                  input#city.form-control( name="city", value="Hà Nội")
+              .form-group.row
+                label.col-sm-4(for="nationality") Quốc Tịch:
+                .col-sm-8
+                  input#nationality.form-control(name="nationality", value="Việt Nam")
+              .form-group.row
+                label.col-sm-4(for="postalCode") Postal/Zip Code:
+                .col-sm-8
+                  input#postalCode.form-control( name="postalCode", value="23000089")
+              .form-group.row
+                label.col-sm-4(for="phone") Phone:
+                .col-sm-8
+                  input#phone.form-control(name="phone", value="023159981")
+              .form-group.row.d-flex.align-items-center
+                .col-sm-6
+                  input#setDefaultAddress(type="checkbox")
+                .col-sm-6
+                  label(for="setDefaultAddress" class="ml-2") Đặt làm địa chỉ mặc định?
+              .form-group.row.d-flex.justify-content-between
+                .col-sm-6
+                  button.edit-address-button.btn.btn-primary Cập nhật địa chỉ
+                .col-sm-6
+                  button.delete-address-button.btn.btn-danger Xóa
+
+    include footer

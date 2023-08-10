@@ -1,0 +1,66 @@
+include mixins 
+
+doctype html
+html
+  head
+    title Danh sách đơn hàng
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="./Css/oder.css")
+  body
+  include ./header1
+  .container
+    .col-md-12.custom-form
+      .d-flex.justify-content-between.align-items-center.mb-2
+        div
+          a.custom-form__link(href="#") Trang chủ / 
+          a.custom-form__link(href="#") Danh sách đơn hàng
+          h2.custom-form__title ĐƠN HÀNG
+      .image-container.custom-form__image-container
+        img.img-fluid.custom-form__image(src="/images/titleleft-dark.png", alt="Ảnh đại diện")
+  .container.mt-5
+    .row
+      .col-md-9
+        table.table
+          thead
+            tr
+              th(colspan="7")
+                .header-wrapper
+                  h2.header-wrapper__title.mb-0 Danh sách đơn hàng
+                  p.header-wrapper__description.mb-0 Trạng thái tất cả(16) | Đã hủy(10) | Chưa duyệt(0) | Đã duyệt(0) | Đã thanh toán - Chờ mua hàng(0) | Đã mua hàng(0) | Hàng về - Chờ giao hàng(0) | Đã kết thúc(6)
+              tr
+                th.table__header STT
+                th.table__header Mã đơn hàng / Ngày mua hàng
+                th.table__header Kho nhận hàng
+                th.table__header Số SP
+                th.table__header Tổng tiền
+                th.table__header Tình trạng
+                th.table__header Thao tác
+          tbody
+              +orderRow(1, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(2, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(1, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(2, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(1, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(2, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(1, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+              +orderRow(2, 'DH001', '2023-08-03', 'Kho A', 5, '$250.00', 'Đã thanh toán')
+      .col-md-3
+        .customer-info
+          h4.customer-info__title Thông tin khách hàng
+          p.customer-info__detail
+            i.fas.fa-user
+            strong Giang Lê
+          p.customer-info__detail Giangle@gmail.com
+          p.customer-info__detail
+            i.fas.fa-building
+              |  Tòa nhà ABC Hà Đông Hà Nội
+          p.customer-info__detail
+            i.fas.fa-phone
+              |  08212345678
+          p.customer-info__detail
+            a.customer-info__link(href="#" data-toggle="modal" data-target="#myModal")
+              strong Chi tiết địa chỉ
+
+
+    include footer 

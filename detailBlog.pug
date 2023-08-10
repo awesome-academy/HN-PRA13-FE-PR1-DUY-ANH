@@ -1,0 +1,121 @@
+doctype html
+html
+  head
+    title Blog Detail 
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
+    link(rel="stylesheet", href="./Css/detailBlog.css")
+  body
+    include ./header1
+    .container
+      .col-md-12.custom-form
+        .d-flex.justify-content-between.align-items-center.mb-2
+          div
+            a.custom-form__link(href="#") Trang chủ / 
+            a.custom-form__link(href="#") Blog 
+            h2.custom-form__title BLOG
+        .image-container.custom-form__image-container
+          img.img-fluid.custom-form__image(src="/images/titleleft-dark.png", alt="Ảnh đại diện")
+    .container.mt-5
+      .row
+        .col-md-3
+          .recent-posts
+            h4.recent-posts__title Bài viết mới nhất
+            .recent-post
+              img.recent-post__image(src="/images/detailBlog_left1.jpg", alt="Bài viết 1")
+              .recent-post__info
+                h6.recent-post__info-title Tiêu đề bài viết 1
+                p.recent-post__info-description Mô tả bài viết 1
+            .recent-post
+              img.recent-post__image(src="/images/detailBlog_left2.jpg", alt="Bài viết 2")
+              .recent-post__info
+                h6.recent-post__info-title Tiêu đề bài viết 2
+                p.recent-post__info-description Mô tả bài viết 2
+            .recent-post
+              img.recent-post__image(src="/images/detailBlog_left3.jpg", alt="Bài viết 3")
+              .recent-post__info
+                h6.recent-post__info-title Tiêu đề bài viết 3
+                p.recent-post__info-description Mô tả bài viết 3
+          .blog-tags
+            h4.blog-tags__title Blog tags
+            .blog-tags__list
+              .btn-group-toggle(data-toggle="buttons")
+                label.btn.btn-secondary.blog-tags__item(for="tag1")
+                  input(type="checkbox", autocomplete="off", id="tag1")
+                  | Đồng hồ
+                label.btn.btn-secondary.blog-tags__item(for="tag2")
+                  input(type="checkbox", autocomplete="off", id="tag2")
+                  | Túi
+                label.btn.btn-secondary.blog-tags__item(for="tag3")
+                  input(type="checkbox", autocomplete="off", id="tag3")
+                  | Phụ kiện
+                label.btn.btn-secondary.blog-tags__item(for="tag4")
+                  input(type="checkbox", autocomplete="off", id="tag4")
+                  | Sandal
+                label.btn.btn-secondary.blog-tags__item(for="tag5")
+                  input(type="checkbox", autocomplete="off", id="tag5")
+                  | Áo sơ mi
+                label.btn.btn-secondary.blog-tags__item(for="tag6")
+                  input(type="checkbox", autocomplete="off", id="tag6")
+                  | Nước hoa
+                label.btn.btn-secondary.blog-tags__item(for="tag7")
+                  input(type="checkbox", autocomplete="off", id="tag7")
+                  | Trẻ em
+                label.btn.btn-secondary.blog-tags__item(for="tag8")
+                  input(type="checkbox", autocomplete="off", id="tag8")
+                  | Thời trang nữ
+          .latest-video
+            h4.latest-video__title Lastest Video
+            div.latest-video__embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(src="./images/review_wine.mp4" allowfullscreen)
+        .col-md-9
+            .blog-post
+                img.blog-post__image(src="/images/detailBlog_right.jpg", alt="Ảnh bài viết")
+                h2.blog-post__title VANG THĂNG LONG CLASSIC
+                p.blog-post__meta Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+                form.blog-post__comment-form
+                    .form-group
+                        label(for="name") Tên của bạn:
+                        input.form-control(type="text", id="name", name="name", required)
+                    .form-group
+                        label(for="email") Email:
+                        input.form-control(type="email", id="email", name="email", required)
+                    .form-group
+                        label(for="comment") Ý kiến:
+                        textarea.form-control(id="comment", name="comment", required)
+                    button.btn.btn-primary(type="submit") GỬI Ý KIẾN
+            .comments
+                h4.comments__title Bình luận(3)
+                .comment_container 
+                    .comment
+                        .comment__header
+                            p.comment__author Bình luận bởi Giangle | Cách đây 4 giờ
+                            span.comment__reply Trả lời
+                    blockquote.comment__content "Cũng ok đấy"
+                .comment_container 
+                    .comment
+                        .comment__header
+                            p.comment__author Bình luận bởi Giangle | Cách đây 4 giờ
+                            span.comment__reply Trả lời
+                    blockquote.comment__content "Cũng ok đấy"   
+                .comment_container
+                    .comment
+                        .comment__header
+                            p.comment__author Bình luận bởi Giangle | Cách đây 4 giờ
+                            span.comment__reply Trả lời
+                    blockquote.comment__content "Cũng ok đấy"
+                ul.pagination.justify-content-end 
+                    li.page-tranfer
+                        a.page-link(href="#" tabindex="-1") 
+                             i.fas.fa-angle-left
+                    li.page-item.active
+                        a.page-link(href="#") 1
+                    li.page-item
+                        a.page-link(href="#") 2
+                    li.page-item
+                        a.page-link(href="#") 3
+                    li.page-tranfer
+                        a.page-link(href="#") 
+                             i.fas.fa-angle-right 
+
+    include footer 

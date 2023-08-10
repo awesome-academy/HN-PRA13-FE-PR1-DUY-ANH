@@ -1,0 +1,134 @@
+/* Reset default margin and padding for lists */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style for top header */
+.top-header {
+    background-color: white; /* Màu nền trắng */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none; /* Loại bỏ đường viền dưới */
+}
+
+.top-nav-list {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.top-nav-list li {
+    margin-left: 20px;
+    text-transform: capitalize; /* Chuyển tất cả chữ thành viết hoa đầu từ */
+}
+.top-nav-list li a,
+        .bottom-nav-list li a {
+            text-decoration: none;
+            color: #d29e9e;
+        }
+
+.search-bar {
+    display: flex;
+    align-items: right;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #090909;
+
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #fffbfb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #d29e9d;
+}
+
+.search-bar button i {
+    font-size: 1.2em;
+}
+
+/* Style for bottom header */
+.bottom-header {
+  background-color: #000000;
+  padding: 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-nav {
+  text-align: center;
+}
+
+.bottom-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-nav-list li {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.bottom-nav-list li:first-child img {
+  width: 214px;
+  height: 153px;
+  margin-right: 40px;
+   /* Dãn cách giữa ảnh và tùy chọn */
+   margin-left: 120px;
+}
+
+.bottom-nav-list li a {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  list-style-type: none;
+}
+.bottom-nav-list li a:hover,
+.bottom-nav-list li a:active {
+    color: yellow;
+}
+
+/* Truy vấn phương tiện cho màn hình nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+  .top-nav-list li {
+      margin-left: 5px;
+  }
+  
+  .search-bar input[type="text"] {
+      padding: 3px;
+  }
+  
+  .search-bar button {
+      padding: 3px;
+  }
+  
+  .bottom-nav-list li {
+      margin: 0 10px;
+  }
+  
+  .bottom-nav-list li a {
+      font-size: 20px;
+  }
+  
+  /* Điều chỉnh cho văn bản không bị dồn lại */
+  .top-nav-list li a,
+  .bottom-nav-list li a {
+      white-space: nowrap; /* Ngăn chặn văn bản xuống dòng */
+      overflow: hidden; /* Ẩn phần văn bản bị tràn ra ngoài */
+      text-overflow: ellipsis; /* Hiển thị dấu chấm cuối khi bị tràn */
+  }
+  
+  /* Các điều chỉnh khác cần thiết cho giao diện nhỏ hơn */
+}

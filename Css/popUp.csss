@@ -1,0 +1,98 @@
+body {
+  background: #ddd;
+  margin: 0;
+  font-family: arial;
+  font-size: 1.2em;
+  color: #111;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 10% auto;
+  text-align: center;
+  line-height: 2em;
+}
+
+.button {
+  border: 3px solid #111;
+  padding: 10px;
+  color: #111;
+  text-decoration: none;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  display: none;
+}
+
+#xmas-popup .popup__content {
+  width: 800px;
+  background: #ffffff;
+  margin: 100px auto;
+  position: relative;
+  border: 5px solid rgba(132, 132, 132, 0.6117647059);
+  display: flex;
+  flex-direction: row;
+}
+
+.popup__image-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.popup__signup-section {
+  flex: 2;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup__input {
+  flex: 1;
+  padding: 15px;
+  margin-right: 10px;
+}
+
+.popup__button {
+  padding: 15px 20px;
+  margin-top: 3px;
+  color: #b59f9f;
+  background-color: rgba(255, 255, 0, 0.6117647059);
+  height: 50px;
+}
+
+.popup__close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  background: #222;
+  border: 3px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  line-height: 0;
+  padding: 9px 0 11px;
+  width: 20px;
+  text-align: center;
+}
+
+.popup:target {
+  display: block;
+}
+
+/*# sourceMappingURL=popUp.csss.map */

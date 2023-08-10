@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title CSS Only Lightbox / Popup
+    link(href="styles.css", rel="stylesheet", type="text/css")
+  body
+    #xmas-popup.popup(href="#")
+      .popup__content
+        .popup__image-section
+          img(src="/images/pop1.png", alt="xmas-sale")
+        .popup__signup-section
+          h2.popup__title Gửi Email!
+          p.popup__description Đăng ký Email ngay hôm nay để nhận thông tin về các sự kiện, các chương trình giảm giá của chúng tôi sớm nhất!
+          form.popup__form.needs-validation(novalidate)
+            .popup__input-container
+              input.popup__input#email(name="email", type="email", required)
+              button.popup__button(type="submit") GỬI EMAIL
+        a.popup__close-button(href="#") x
+
+    // normal page code
+    .wrapper
+      h1 CSS Only Popup
+      p
+        | Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore maga aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja sequitur mutationem consuetudium lectorum.
+      a.button(href="#xmas-popup") Show popup

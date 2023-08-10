@@ -1,0 +1,11 @@
+mixin orderRow(index, code, date, warehouse, products, total, status)
+  tr.clickable-row.table__row
+    td.table__cell #{index}
+    td.table__cell #{code} / #{date}
+    td.table__cell #{warehouse}
+    td.table__cell #{products}
+    td.table__cell #{total}
+    td.table__cell #{status}
+    td.table__cell
+      a.custom-form__link.table__link(href="#") Xem chi tiết
+
